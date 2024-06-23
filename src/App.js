@@ -1,4 +1,4 @@
-import { useEffect,  useRef,  useState } from "react";
+import { useState } from "react";
 import { ToastContainer , toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
@@ -13,12 +13,10 @@ function App() {
   const [error ,  setError] = useState('');
   const [loading , setLoading] = useState(false);
   const [weatherObj , setWeatherObj]=useState({"name":null, "icon":null , 'weather':'' ,"Temperature":null , "Feels":null , "Humidity":null , "Wind":null})
-  const isFirstRef = useRef(true);
-
   
   const errorToast = (message)=>{
     toast.error(message || 'Error' , {
-      position: "top-center",
+      position: "top-right",
       autoClose:4000,
       hideProgressBar: true,
       closeOnClick: true,
@@ -28,21 +26,33 @@ function App() {
       theme: 'colored'
     })
   }
-
+  
   const handleSearch = async()=>{
-    handleLocation()
+    if(!city){
+      errorToast('Enter some City Name')
+      return
+    }
+    toast.promise(
+      handleLocation() , {
+        pending:'Fetching Data',
+        position:'top-center',
+        autoClose:4000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress:undefined,
+        theme: 'colored'
+      }
+    )
   }
-
-
+  
+  
   const handleLocation =async()=>{
     try{
-      if(!city){
-        errorToast('Enter some City Name')
-        return
-      }
       const response = await axios.get(`http://dataservice.accuweather.com/locations/v1/cities/search`,{
         params:{
-          apikey:'pWw8cV2VMULWilQ7mzu1haaGwANX6Fgp',
+          apikey:'',
           q:city
         }
       })
@@ -51,7 +61,7 @@ function App() {
         throw new Error('Invalid City Name')
       handleWeather(data[0].Key  , city);
     }catch(error){
-        errorToast(error.message)
+      errorToast(error.message)
     }
   }
   
@@ -59,7 +69,7 @@ function App() {
     try{
       const response = await axios.get(`http://dataservice.accuweather.com/currentconditions/v1/${key}` , {
         params:{
-          apikey:'pWw8cV2VMULWilQ7mzu1haaGwANX6Fgp',
+          apikey:'',
           details:true
         }
       })
@@ -73,18 +83,18 @@ function App() {
         "Humidity":data[0].RelativeHumidity , "Wind":data[0].Wind.Speed.Metric.Value
       })
     }catch(error){
-        errorToast(error.message)
+      errorToast(error.message)
     }
   }
   
- 
+  
   
   return (
     <ContextProvider value={{dark , setDark , city , setCity , weatherObj , handleSearch}}>
     <div className="flex outer-wrapper" style={{ backgroundColor:dark?'rgb(40 ,40,40)':"rgb(240 , 240 ,240)"}}>
-
+    
     <Navbar/>
-
+    
     <div style={{color:dark?'white':'black'}} className="flex inner-wrapper">
     <div style={{fontWeight:'bold' , fontSize:'2.5rem'}}>{(!weatherObj.name)?'Search Cities':weatherObj.name}</div>
     <div className="type-wrapper">
@@ -93,10 +103,10 @@ function App() {
     <InfoSection/>
     <DetailsSection/>
     </div>
-
+    
     <ToastContainer 
     newestOnTop={true}/>
-
+    
     </div>
     </ContextProvider>
   )

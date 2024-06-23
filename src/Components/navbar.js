@@ -13,7 +13,7 @@ const Navbar = ()=>{
         <img className="dark-btn" src={sun} alt={dark?'Light':'Dark'} onClick={()=>setDark(!dark)}/>
         <input type='text' placeholder='Enter City Name...' 
         style={{color:dark?'white':'black'}}
-        onChange={(e)=>{setCity(e.target.value)}}/>
+        onChange={(e)=>{setCity(e.target.value)}} required/>
         <img src={search} alt='Search' onClick={handleSearch}/>
         </div>
         </>
