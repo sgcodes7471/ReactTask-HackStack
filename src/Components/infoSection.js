@@ -11,6 +11,7 @@ const InfoSection = ()=>{
     
     const {weatherObj , dark} = useContext(Context)
     return(
+        
         <div style={{filter:(!weatherObj.name)?'blur(5px)':'none' ,color:dark?'white':'black'  , display:"grid" , gridTemplateColumns:'1fr 1fr' , gap:'40px' , }}>
         <p className="flex">
         <img src={weatherObj.Temperature>35?hightemp:(weatherObj.Temperature<20?lowtemp:midtemp)}/>
@@ -29,7 +30,7 @@ const InfoSection = ()=>{
                 })
             }
         </div>
-            
+        
         )
     }
 
