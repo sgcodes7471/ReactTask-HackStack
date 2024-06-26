@@ -81,7 +81,7 @@ function App() {
     try{
       const response = await axios.get(`http://dataservice.accuweather.com/locations/v1/cities/search`,{
         params:{
-          apikey:'',
+          apikey:'pWw8cV2VMULWilQ7mzu1haaGwANX6Fgp',
           q:city
         }
       })
@@ -98,7 +98,7 @@ function App() {
     try{
       const response = await axios.get(`http://dataservice.accuweather.com/currentconditions/v1/${key}` , {
         params:{
-          apikey:'',
+          apikey:'pWw8cV2VMULWilQ7mzu1haaGwANX6Fgp',
           details:true
         }
       })
@@ -125,7 +125,7 @@ function App() {
     <Navbar/>
     
     <div style={{color:dark?'white':'black'}} className="flex inner-wrapper">
-    <div style={{fontWeight:'bold' , fontSize:'2.5rem'}}>{weatherObj.name || 'Search Cities!!'}</div>
+    <div style={{fontWeight:'bold' , fontSize:'2.5rem' , textAlign:'center'}}>{weatherObj.name || 'Search Cities!!'}</div>
     <div className="type-wrapper flex" style={{flexDirection:'column' , filter:(!weatherObj.name)?'blur(5px)':'none'}}>
     <img src={icon} alt="" style={{width:'200px' , margin:'-5vh '}}/>
     <div style={{fontSize:'2rem' , fontWeight:'bold'}}>{weatherObj.weather || "Weather?"}</div>
