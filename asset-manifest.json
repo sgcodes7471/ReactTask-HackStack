@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/ReactTask-HackStack/static/css/main.dca97a22.css",
+    "main.js": "/ReactTask-HackStack/static/js/main.7169cce8.js",
+    "static/media/feel.svg": "/ReactTask-HackStack/static/media/feel.ef1b4a9b3c3e1ff580e6468280c595eb.svg",
+    "static/media/snowy-6.svg": "/ReactTask-HackStack/static/media/snowy-6.abf211998f21d5289adb043ca67087ad.svg",
+    "static/media/cloudy-day-3.svg": "/ReactTask-HackStack/static/media/cloudy-day-3.38f6349b79e1b2116001ab225ee149aa.svg",
+    "static/media/day.svg": "/ReactTask-HackStack/static/media/day.212e04206236caeb33f88e1c9dc942ad.svg",
+    "static/media/cloudy-night-3.svg": "/ReactTask-HackStack/static/media/cloudy-night-3.3cf5ca070bb5693d4b46bf1807d30b8d.svg",
+    "static/media/thunder.svg": "/ReactTask-HackStack/static/media/thunder.58220cf8d60aac3af8af8d076cf52c1b.svg",
+    "static/media/wind.svg": "/ReactTask-HackStack/static/media/wind.1ca7b097d5f017c1f8c7fe5b4a8959e6.svg",
+    "static/media/rainy-7.svg": "/ReactTask-HackStack/static/media/rainy-7.3ed3063ff5ebdb69753c4d7c165ede0b.svg",
+    "static/media/night.svg": "/ReactTask-HackStack/static/media/night.6a2ab5e9476789c627efd8f2f051442b.svg",
+    "static/media/hightemp.svg": "/ReactTask-HackStack/static/media/hightemp.f4010442c148c63c214fffc115b59947.svg",
+    "static/media/lowtemp.svg": "/ReactTask-HackStack/static/media/lowtemp.a62c552cf98bc50551772d20407e5de9.svg",
+    "static/media/midtemp.svg": "/ReactTask-HackStack/static/media/midtemp.c8fc15485ec69039469fb0ad0a9fa1e4.svg",
+    "static/media/humd.svg": "/ReactTask-HackStack/static/media/humd.dd99bb95e1f213eb6c1cca74a57fe94f.svg",
+    "static/media/sun.svg": "/ReactTask-HackStack/static/media/sun.90d0a0314c958597a7efbee8816c015e.svg",
+    "index.html": "/ReactTask-HackStack/index.html",
+    "static/media/search.svg": "/ReactTask-HackStack/static/media/search.966a10ad0569eb439087a1d4a211d031.svg",
+    "main.dca97a22.css.map": "/ReactTask-HackStack/static/css/main.dca97a22.css.map",
+    "main.7169cce8.js.map": "/ReactTask-HackStack/static/js/main.7169cce8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dca97a22.css",
+    "static/js/main.7169cce8.js"
+  ]
+}
