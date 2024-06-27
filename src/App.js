@@ -79,7 +79,7 @@ function App() {
   
   const handleLocation =async()=>{
     try{
-      const response = await axios.get(`http://dataservice.accuweather.com/locations/v1/cities/search`,{
+      const response = await axios.get(`https://dataservice.accuweather.com/locations/v1/cities/search`,{
         params:{
           apikey:'pWw8cV2VMULWilQ7mzu1haaGwANX6Fgp',
           q:city
@@ -96,7 +96,7 @@ function App() {
   
   const handleWeather=async(key , city)=>{
     try{
-      const response = await axios.get(`http://dataservice.accuweather.com/currentconditions/v1/${key}` , {
+      const response = await axios.get(`https://dataservice.accuweather.com/currentconditions/v1/${key}` , {
         params:{
           apikey:'pWw8cV2VMULWilQ7mzu1haaGwANX6Fgp',
           details:true
