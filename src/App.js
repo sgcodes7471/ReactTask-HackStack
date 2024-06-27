@@ -120,15 +120,15 @@ function App() {
   
   return (
     <ContextProvider value={{dark , setDark , city , setCity , weatherObj , handleSearch}}>
-    <div className="flex outer-wrapper" style={{ backgroundColor:dark?'rgb(40 ,40,40)':"rgb(240 , 240 ,240)"}}>
+    <div className="flex outer-wrapper" style={{ backgroundColor:dark?'rgb(40 ,40,40)':"white"}}>
     
     <Navbar/>
     
     <div style={{color:dark?'white':'black'}} className="flex inner-wrapper">
-    <div style={{fontWeight:'bold' , fontSize:'2.5rem' , textAlign:'center'}}>{weatherObj.name || 'Search Cities!!'}</div>
+    <div style={{fontWeight:'bold' , fontSize:'3rem' , textAlign:'center'}}>{weatherObj.name || 'Search Cities!!'}</div>
     <div className="type-wrapper flex" style={{flexDirection:'column' , filter:(!weatherObj.name)?'blur(5px)':'none'}}>
-    <img src={icon} alt="" style={{width:'200px' , margin:'-5vh '}}/>
-    <div style={{fontSize:'2rem' , fontWeight:'bold'}}>{weatherObj.weather || "Weather?"}</div>
+    <img src={icon} alt="" style={{width:'200px' , margin:'-5vh'}}/>
+    <div style={{fontSize:'2.5rem' , fontWeight:'bold' , textAlign:"center"}}>{weatherObj.weather || "Weather?"}</div>
     </div>
     <InfoSection/>
     <DetailsSection/>

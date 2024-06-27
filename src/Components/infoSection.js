@@ -14,8 +14,8 @@ const InfoSection = ()=>{
         
         <div style={{filter:(!weatherObj.name)?'blur(5px)':'none' ,color:dark?'white':'black'  , display:"grid" , gridTemplateColumns:'1fr 1fr' , gap:'40px' , }}>
         <p className="flex">
-        <img src={weatherObj.Temperature>35?hightemp:(weatherObj.Temperature<20?lowtemp:midtemp)}/>
-        <div style={{paddingLeft:'10px'}}><span>{weatherObj.Temperature}°C </span><br/>Temperature</div>  
+        <img  src={weatherObj.Temperature>35?hightemp:(weatherObj.Temperature<20?lowtemp:midtemp)}/>
+        <div className='w-txt' style={{paddingLeft:'10px'}}><span>{weatherObj.Temperature}°C </span><br/>Temperature</div>  
         </p>
         {
             [{"src":Feels , "field":"Feels" , "value":weatherObj.Feels  , "unit":"°C"} ,
@@ -24,7 +24,7 @@ const InfoSection = ()=>{
                     return(
                         <p className="flex" key={index}>
                         <img style={{width:'50px'}} src={item.src}/>
-                        <div style={{paddingLeft:'10px'}}><span>{item.value} {item.unit}  </span><br/>{item.field}</div>
+                        <div  style={{paddingLeft:'10px'}}><span>{item.value} {item.unit}  </span><br/>{item.field}</div>
                         </p>
                     )
                 })

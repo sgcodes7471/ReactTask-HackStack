@@ -16,7 +16,7 @@ const Navbar = ()=>{
         <input type='text' placeholder='Enter City Name...' 
         style={{color:dark?'white':'black'}}
         onChange={(e)=>{setCity(e.target.value)}} required/>
-        <img src={search} alt='Search' onClick={handleSearch}/>
+        <img src={search} alt='Search' className="search-btn" onClick={handleSearch}/>
         </div>
         </>
     )
