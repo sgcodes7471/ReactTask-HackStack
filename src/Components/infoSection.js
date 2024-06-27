@@ -23,7 +23,7 @@ const InfoSection = ()=>{
             {"src":Wind , "field":'Wind' , "value":weatherObj.Wind , "unit":"Kmph"}].map((item , index)=>{
                     return(
                         <p className="flex" key={index}>
-                        <img style={{width:'50px'}} src={item.src}/>
+                        <img style={{width:'40px'}} src={item.src}/>
                         <div  style={{paddingLeft:'10px'}}><span>{item.value} {item.unit}  </span><br/>{item.field}</div>
                         </p>
                     )

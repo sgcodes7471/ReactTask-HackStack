@@ -125,9 +125,9 @@ function App() {
     <Navbar/>
     
     <div style={{color:dark?'white':'black'}} className="flex inner-wrapper">
-    <div style={{fontWeight:'bold' , fontSize:'3rem' , textAlign:'center'}}>{weatherObj.name || 'Search Cities!!'}</div>
+    <div style={{fontWeight:'bold' , fontSize:'2.5rem' , textAlign:'center'}}>{weatherObj.name || 'Search Cities!!'}</div>
     <div className="type-wrapper flex" style={{flexDirection:'column' , filter:(!weatherObj.name)?'blur(5px)':'none'}}>
-    <img src={icon} alt="" style={{width:'200px' , margin:'-5vh'}}/>
+    <img src={icon} alt="" className="main-icon" style={{width:'200px' , margin:'-5vh'}}/>
     <div style={{fontSize:'2.5rem' , fontWeight:'bold' , textAlign:"center"}}>{weatherObj.weather || "Weather?"}</div>
     </div>
     <InfoSection/>

@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+In the project directory:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
+How To RUN???
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+if something else is running on this port then it will automatically ask you if you want it to run on some other port.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### About the Project
 
-### `npm run build`
+The task project uses API's from Accuweather. You can replace the Api Keys in the App.js line 84 and 101 with your own api key.
+The fetching of api is made asynchronous by async-await
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+useContext, useState , useEffect are the hooks majorly used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I have also used several svg files, put in the assests folder
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### What's in it?
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The webpage has a simple UI with the ability to switch between dark and light mode. This has been done using state variable 'dark'.
+Further dark variable has been utilized in inline css for colour schemes
+You can alter between the modes manually by small icon on the left of search bar
+Also note that based on the time of your system, the default mode is adjusted to be dark from 6pm to 6am.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In the api fetch, I store some specific information in the state varible and the main icon chnages based on the weather condition.
+also the temperature icon chnages based on the how high the temperature is!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+In the last portion of the webpage, there are sometimes small suggestions based on the weather conditions. To know in more detail refer to /Components/detailsSection.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+React-toastify has been used to somecases error messages and proccessing messages.
 
-## Learn More
+A proper error handling has been done in try catch block, Users cannot search with a  empty seacrh bar and also not wrong cities.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### what's the catch?
+The Accuweather api presumably allows only 50 fetches at max in the span of 24hours for their current conditions api
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

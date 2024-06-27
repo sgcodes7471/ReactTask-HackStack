@@ -7,7 +7,7 @@ body {
     font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 code {
@@ -15,7 +15,7 @@ code {
     monospace;
 }
 .outer-wrapper{
-  flex-direction:column;width:100vw ; padding:20px; justify-content: flex-start ;
+  flex-direction:column;width:100vw; height: 100vh; padding:20px; justify-content: flex-start ;
 }
 .inner-wrapper{
  flex-direction:column ; margin:20px 40px ; padding:20px ; border:2px solid rgb(255, 81, 0) ; border-radius:10px;
@@ -54,7 +54,6 @@ input{
   }
   .outer-wrapper{
     justify-content: flex-start;
-    padding-top: 80px;
     margin: 0px;
   }
   .details-wrapper{
@@ -62,8 +61,11 @@ input{
   }
 }
 @media screen and (max-width:400px) {
-  .inner-wrapper{
+  .outer-wrapper{
     height: 100%;
+  }
+  .main-icon{
+    width: 100px;
   }
 }
 span{font-size: 1.2rem; font-weight: bold;}
