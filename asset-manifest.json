@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ReactTask-HackStack/static/css/main.73f53bfb.css",
-    "main.js": "/ReactTask-HackStack/static/js/main.46618109.js",
+    "main.css": "/ReactTask-HackStack/static/css/main.ec2ae084.css",
+    "main.js": "/ReactTask-HackStack/static/js/main.744fec3e.js",
     "static/media/feel.svg": "/ReactTask-HackStack/static/media/feel.ef1b4a9b3c3e1ff580e6468280c595eb.svg",
     "static/media/snowy-6.svg": "/ReactTask-HackStack/static/media/snowy-6.abf211998f21d5289adb043ca67087ad.svg",
     "static/media/cloudy-day-3.svg": "/ReactTask-HackStack/static/media/cloudy-day-3.38f6349b79e1b2116001ab225ee149aa.svg",
@@ -18,11 +18,11 @@
     "static/media/sun.svg": "/ReactTask-HackStack/static/media/sun.90d0a0314c958597a7efbee8816c015e.svg",
     "index.html": "/ReactTask-HackStack/index.html",
     "static/media/search.svg": "/ReactTask-HackStack/static/media/search.966a10ad0569eb439087a1d4a211d031.svg",
-    "main.73f53bfb.css.map": "/ReactTask-HackStack/static/css/main.73f53bfb.css.map",
-    "main.46618109.js.map": "/ReactTask-HackStack/static/js/main.46618109.js.map"
+    "main.ec2ae084.css.map": "/ReactTask-HackStack/static/css/main.ec2ae084.css.map",
+    "main.744fec3e.js.map": "/ReactTask-HackStack/static/js/main.744fec3e.js.map"
   },
   "entrypoints": [
-    "static/css/main.73f53bfb.css",
-    "static/js/main.46618109.js"
+    "static/css/main.ec2ae084.css",
+    "static/js/main.744fec3e.js"
   ]
 }
